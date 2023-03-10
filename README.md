@@ -1,4 +1,4 @@
-# How to Create Web ChatGPT Chatbot  using Java/JEE, Springboot, Thymeleaf, HTML5, jQuery, CSS
+# How to Create Web ChatGPT Chatbot  using Java/JEE, Springboot, Thymeleaf, Bootstrap, HTML5, jQuery, CSS
 ### Workflow
 
 ![Alt text](wf.png)
@@ -21,8 +21,8 @@ G -- Test with<br/>InternetBrowser --> H{http://localhost:8080}
 
 ### Getting Started
 <ul>
-<li>Download Open JDK <a href="https://www.eclipse.org/downloads/packages/release/2022-12/r/eclipse-ide-enterprise-java-and-web-developers">here</a> and install</li>
-<li>Download Eclipse JEE IDE <a href="https://openjdk.org/">here</a>, configure JDK and install</li>
+<li>Download Open JDK <a href="https://openjdk.org/">here</a> and install</li>
+<li>Download Eclipse JEE IDE <a href="https://www.eclipse.org/downloads/packages/release/2022-12/r/eclipse-ide-enterprise-java-and-web-developers">here</a>, configure JDK and install</li>
 <li>Checkout <a href="https://github.com/lalumastan/chatgpt.git">this code</a> from Github</li>
 <li>Create a free account on <a href="https://openai.com/">OpenAI</a></li>
 <li>Set <code>OPENAI_DEMO_API_KEY</code> environment variable </li>
@@ -34,4 +34,4 @@ G -- Test with<br/>InternetBrowser --> H{http://localhost:8080}
 
 ### Tutorial
 
-<a  href="http://www.youtube.com/watch?feature=player_embedded&v=8DKcwd8DWHg"  target="_blank"><img  src="http://img.youtube.com/vi/8DKcwd8DWHg/0.jpg"  alt="How to Create Web ChatGPT Chatbot  using Java/JEE, Springboot, Thymeleaf, HTML5, jQuery, CSS" width="240"  height="180"  border="10"  /></a>
+<a  href="http://www.youtube.com/watch?feature=player_embedded&v=AlkpElvcUPU"  target="_blank"><img  src="http://img.youtube.com/vi/AlkpElvcUPU/0.jpg"  alt="How to Create Web ChatGPT Chatbot  using Java/JEE, Springboot, Thymeleaf, Bootstrap, HTML5, jQuery, CSS" width="240"  height="180"  border="10"  /></a>
