@@ -1,4 +1,4 @@
-package icsdiscover.aiweb;
+package icsdiscover.chatgpt;
 
 import java.text.BreakIterator;
 import java.util.ArrayList;

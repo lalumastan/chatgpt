@@ -1,3 +1,3 @@
-package icsdiscover.aiweb;
+package icsdiscover.chatgpt;
 
 record Message(String role, String content) {}

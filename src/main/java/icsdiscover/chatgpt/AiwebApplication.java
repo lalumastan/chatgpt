@@ -1,4 +1,4 @@
-package icsdiscover.aiweb;
+package icsdiscover.chatgpt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

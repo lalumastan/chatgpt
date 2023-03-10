@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>icsdiscover</groupId>
-	<artifactId>aiweb</artifactId>
+	<artifactId>chatgpt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>aiweb</name>
-	<description>AI Web Application</description>
+	<name>chatgpt</name>
+	<description>ChatGPT Web Application</description>
 	<properties>
 		<java.version>19</java.version>
 	</properties>
