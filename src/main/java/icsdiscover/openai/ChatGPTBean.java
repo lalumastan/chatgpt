@@ -1,8 +1,8 @@
-package icsdiscover.chatgpt;
+package icsdiscover.openai;
 
 import java.io.Serializable;
 
-public class AiwebBean implements Serializable {
+public class ChatGPTBean implements Serializable {
 
 	/**
 	 * 
@@ -29,7 +29,7 @@ public class AiwebBean implements Serializable {
 
 	@Override
 	public String toString() {
-		return "AiwebBean [title=" + title + ", prompt=" + prompt + "]";
+		return "ChatGPTBean [title=" + title + ", prompt=" + prompt + "]";
 	}
 
 }

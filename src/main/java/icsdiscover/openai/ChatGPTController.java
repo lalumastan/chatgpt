@@ -1,4 +1,4 @@
-package icsdiscover.chatgpt;
+package icsdiscover.openai;
 
 import java.util.Locale;
 
@@ -19,21 +19,21 @@ import jakarta.servlet.http.HttpSession;
 
 @SessionAttributes({ "currentChat" })
 @Controller
-public class AiwebController {
-	private static final Logger log = LoggerFactory.getLogger(AiwebController.class);
+public class ChatGPTController {
+	private static final Logger log = LoggerFactory.getLogger(ChatGPTController.class);
 
 	private final static Locale locale = Locale.getDefault();
 
 	@Autowired
-	private AiwebService aiwebService;
+	private ChatGPTService chatGPTService;
 
 	@Autowired
 	private MessageSource messageSource;
 
 	@GetMapping("/")
-	public String index(AiwebBean aiwebBean, Model model, SessionStatus status) {
-		aiwebBean.setTitle(messageSource.getMessage("homeText", null, locale).split("Q:")[0]);
-		model.addAttribute("aiwebBean", aiwebBean);
+	public String index(ChatGPTBean chatGPTBean, Model model, SessionStatus status) {
+		chatGPTBean.setTitle(messageSource.getMessage("homeText", null, locale).split("Q:")[0]);
+		model.addAttribute("chatGPTBean", chatGPTBean);
 		status.setComplete();
 
 		return "index";
@@ -41,14 +41,14 @@ public class AiwebController {
 
 	@ResponseBody
 	@PostMapping("/chat")
-	public String chat(@ModelAttribute("aiwebBean") AiwebBean aiwebBean, Model model, HttpSession session) {
-		log.info("Getting answer from Open AI");
-		String prompt = aiwebBean.getPrompt(), response = "Fatal Error";
+	public String chat(@ModelAttribute("chatGPTBean") ChatGPTBean chatGPTBean, Model model, HttpSession session) {
+		log.info("Getting answer from Open AI ChatGPT");
+		String prompt = chatGPTBean.getPrompt(), response = "Fatal Error";
 		try {
 			String currentChat = (String) session.getAttribute("currentChat");
 			currentChat = (currentChat == null || "".equals(currentChat) ? "" : currentChat) + "\nQ: " + prompt
 					+ "\nA: ";
-			currentChat += aiwebService.parseUnstructuredData(prompt).trim();
+			currentChat += chatGPTService.parseUnstructuredData(prompt).trim();
 			response = currentChat;
 			model.addAttribute("currentChat", currentChat);
 		} catch (Exception e) {

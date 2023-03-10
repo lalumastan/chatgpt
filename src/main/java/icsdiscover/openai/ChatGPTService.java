@@ -1,4 +1,4 @@
-package icsdiscover.chatgpt;
+package icsdiscover.openai;
 
 import java.text.BreakIterator;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
-public class AiwebService {
+public class ChatGPTService {
 
 	private static final String API_URL = "https://api.openai.com/v1/";
 
@@ -24,14 +24,14 @@ public class AiwebService {
 
 	private static final ObjectMapper OM = new ObjectMapper();
 
-	private ArrayList<Message> parseMessages(String data) throws Exception {
-		ArrayList<Message> messageList = new ArrayList<>();
+	private ArrayList<ChatGPTMessage> parseMessages(String data) throws Exception {
+		ArrayList<ChatGPTMessage> messageList = new ArrayList<>();
 		BreakIterator bi = BreakIterator.getSentenceInstance();
 		bi.setText(data);
 		int index = 0;
 		while (bi.next() != BreakIterator.DONE) {
 			String sentence = data.substring(index, bi.current());
-			messageList.add(new Message(sentence.endsWith("?") ? "user" : "assistant", sentence));
+			messageList.add(new ChatGPTMessage(sentence.endsWith("?") ? "user" : "assistant", sentence));
 			index = bi.current();
 		}
 		return messageList;
@@ -45,7 +45,8 @@ public class AiwebService {
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		headers.set("Authorization", "Bearer " + KEY);
 
-		HttpEntity<String> entity = new HttpEntity<String>(OM.writeValueAsString(new ChatGPTRequest(parseMessages(data))), headers);
+		HttpEntity<String> entity = new HttpEntity<String>(
+				OM.writeValueAsString(new ChatGPTRequest(parseMessages(data))), headers);
 		RestTemplate restTemplate = new RestTemplate();
 		ResponseEntity<ChatGPTResponse> responseEntity = restTemplate.exchange(API_URL + requestPath, httpMethod,
 				entity, ChatGPTResponse.class);

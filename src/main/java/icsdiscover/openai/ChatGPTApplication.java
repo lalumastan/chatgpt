@@ -1,13 +1,13 @@
-package icsdiscover.chatgpt;
+package icsdiscover.openai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AiwebApplication {
+public class ChatGPTApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AiwebApplication.class, args);
+		SpringApplication.run(ChatGPTApplication.class, args);
 	}
 
 }
