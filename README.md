@@ -1,8 +1,4 @@
-
-
-  
-
-# How to Create Web ChatGPT Chatbot  using Java/JEE, Springboot, HTML5, jQuery, CSS
+# How to Create Web ChatGPT Chatbot  using Java/JEE, Springboot, Thymeleaf, HTML5, jQuery, CSS
 ### Workflow
 
 ![Alt text](wf.png)
@@ -38,4 +34,4 @@ G -- Test with<br/>InternetBrowser --> H{http://localhost:8080}
 
 ### Tutorial
 
-<a  href="http://www.youtube.com/watch?feature=player_embedded&v=8DKcwd8DWHg"  target="_blank"><img  src="http://img.youtube.com/vi/8DKcwd8DWHg/0.jpg"  alt="How to Create Web ChatGPT Chatbot  using Java/JEE, Springboot, HTML5, jQuery, CSS" width="240"  height="180"  border="10"  /></a>
+<a  href="http://www.youtube.com/watch?feature=player_embedded&v=8DKcwd8DWHg"  target="_blank"><img  src="http://img.youtube.com/vi/8DKcwd8DWHg/0.jpg"  alt="How to Create Web ChatGPT Chatbot  using Java/JEE, Springboot, Thymeleaf, HTML5, jQuery, CSS" width="240"  height="180"  border="10"  /></a>
