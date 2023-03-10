@@ -29,6 +29,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
 	integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
 	crossorigin="anonymous"></script>
+<script th:src="@{/js/script.js}"></script>
 </head>
 <body background="https://aiweb-icsdiscover.vercel.app/images/ai.jpg">
 	<div>
@@ -68,7 +69,7 @@
 		<div class="container my-3">
 			<div id="loading" class="text-bg-primary text-center rounded"></div>
 			<div id="chatGPTConversation"
-				class="row my-3 border border-info rounded overflow-auto"></div>
+				class="row my-3 border border-info rounded overflow-auto bg-dark"></div>
 			<div class="row alert alert-info border border-info">
 				<h2 class="text-center text-primary">iCS Discover&#x27;s
 					ChatGPT Chatbot</h2>
@@ -99,64 +100,7 @@
 	
 	// When DOM is loaded this 
     // function will get executed
-    $(() => {
-    	
-       	function showWait() {
-       		$( "#loading" ).html('Processing.  Please wait ...  <img src="images/loading.gif" alt="Processing.  Please wait ..." width="13%">');
-       		$( "#loading" ).
-       		 dialog(
-       				 {
-       				  modal: true,
-       				  width: 300,                     
-       				  height: 100,
-       				  show: {
-       					effect: "slide",
-       					duration: 500
-       				  },
-       				  hide: {
-       					effect: "fade",
-       					duration: 500
-       				  }
-       				}
-       		 );
-       		$(".ui-dialog-titlebar").hide();
-       	}
-       	
-       	function hideWait() {
-       		$( "#loading" ).dialog("close");
-       	} 
-    	
-        // function will get executed 
-        // on click of submit button
-        $("#submitChatGPT").click(function(ev) {        	
-        	$('#submitChatGPT').attr('disabled','disabled');
-        	//$("#loading").html('<div class="col-3 alert alert-warning rounded text-center">Processing.  Please wait ...  <img src="images/loading.gif" alt="Processing.  Please wait ..." width="10%"></div>');
-        	showWait();
-            var chatGPTForm = $("#chatGPTForm");
-            var url = chatGPTForm.attr('action');
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: chatGPTForm.serialize(),
-                success: function(result) {                    
-                    // Ajax call completed successfully                    
-                    $("#chatGPTConversation").html('<code class="text-justify d-flex flex-lg-wrap chat"><strong class="small">' + result + '</strong></code>');
-                    //alert("Form Submited Successfully");
-                },
-                error: function(error) {
-                    // Some error in ajax call
-                	$("#chatGPTConversation").html(error);
-                },
-                complete: function() {
-                	hideWait();
-                	chatGPTForm[0].reset();
-                	$('#submitChatGPT').removeAttr('disabled');
-                }
-            });
-            
-            return false;
-        });
-    });
+    $(() => {handleClick()});
         
 	</script>
 </body>
