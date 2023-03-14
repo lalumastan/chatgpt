@@ -26,8 +26,8 @@ G -- Test with<br/>InternetBrowser --> H{http://localhost:8080}
 <li>Checkout <a href="https://github.com/lalumastan/chatgpt.git">this code</a> from Github</li>
 <li>Create a free account on <a href="https://openai.com/" target="_new">OpenAI</a></li>
 <li>Set <code>OPENAI_DEMO_API_KEY</code> environment variable </li>
-<li>Compile and build the code using in Eclipse</li>
-<li>Run the development server using in Eclipse</li>
+<li>Compile and build the code using Eclipse</li>
+<li>Run the development server using Eclipse</li>
 <li>Open <a  href="http://localhost:8080" target="_new">http://localhost:8080</a> with your browser to see the result.</li>
 <li><a href="https://aiweb-icsdiscover.vercel.app/" target="_new">Advanced Application Demo</a></li>
 </ul>
