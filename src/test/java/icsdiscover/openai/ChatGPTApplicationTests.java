@@ -1,10 +1,10 @@
-package icsdiscover.aiweb;
+package icsdiscover.openai;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AiwebApplicationTests {
+class ChatGPTApplicationTests {
 
 	@Test
 	void contextLoads() {
