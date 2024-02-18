@@ -22,7 +22,7 @@ import jakarta.servlet.http.HttpSession;
 public class ChatGPTController {
 	private static final Logger log = LoggerFactory.getLogger(ChatGPTController.class);
 
-	private final static Locale locale = Locale.getDefault();
+	private final static Locale locale = Locale.getDefault();	
 
 	@Autowired
 	private ChatGPTService chatGPTService;
