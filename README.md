@@ -19,9 +19,6 @@ C --> G[Compile & Build<br/>Run Locally]
 G -- Test with<br/>InternetBrowser --> H{http://localhost:8080}
 ```
 </details>
-### Workflow
-
-![Alt text](wf.png)
 
 ### Getting Started
 <ul>
