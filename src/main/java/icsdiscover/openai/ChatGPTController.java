@@ -32,7 +32,6 @@ public class ChatGPTController {
 	private MessageSource messageSource;
 
 	@GetMapping("/")
-	@RegisterReflectionForBinding({ ChatGPTBean.class })
 	public String index(ChatGPTBean chatGPTBean, Model model, SessionStatus status) {
 		chatGPTBean.setTitle(messageSource.getMessage("homeText", null, locale).split("Q:")[0]);
 		model.addAttribute("chatGPTBean", chatGPTBean);
@@ -43,7 +42,6 @@ public class ChatGPTController {
 
 	@ResponseBody
 	@PostMapping("/chat")
-	@RegisterReflectionForBinding({ ChatGPTBean.class })
 	public String chat(@ModelAttribute("chatGPTBean") ChatGPTBean chatGPTBean, Model model, HttpSession session) {
 		log.info("Getting answer from Open AI ChatGPT");
 		String prompt = chatGPTBean.getPrompt(), response = "Fatal Error";
