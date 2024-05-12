@@ -3,6 +3,7 @@ package icsdiscover.openai;
 import java.text.BreakIterator;
 import java.util.ArrayList;
 
+import org.springframework.aot.hint.annotation.RegisterReflectionForBinding;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -24,6 +25,7 @@ public class ChatGPTService {
 
 	private static final ObjectMapper OM = new ObjectMapper();
 
+	@RegisterReflectionForBinding({ ChatGPTMessage.class })
 	private ArrayList<ChatGPTMessage> parseMessages(String data) throws Exception {
 		ArrayList<ChatGPTMessage> messageList = new ArrayList<>();
 		BreakIterator bi = BreakIterator.getSentenceInstance();
@@ -37,6 +39,7 @@ public class ChatGPTService {
 		return messageList;
 	}
 
+	@RegisterReflectionForBinding({ ChatGPTRequest.class, ChatGPTResponse.class })
 	public String parseUnstructuredData(String data) throws Exception {
 		HttpMethod httpMethod = HttpMethod.POST;
 		String requestPath = "chat/completions";

@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.aot.hint.annotation.RegisterReflectionForBinding;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -31,6 +32,7 @@ public class ChatGPTController {
 	private MessageSource messageSource;
 
 	@GetMapping("/")
+	@RegisterReflectionForBinding({ ChatGPTBean.class })
 	public String index(ChatGPTBean chatGPTBean, Model model, SessionStatus status) {
 		chatGPTBean.setTitle(messageSource.getMessage("homeText", null, locale).split("Q:")[0]);
 		model.addAttribute("chatGPTBean", chatGPTBean);
@@ -41,6 +43,7 @@ public class ChatGPTController {
 
 	@ResponseBody
 	@PostMapping("/chat")
+	@RegisterReflectionForBinding({ ChatGPTBean.class })
 	public String chat(@ModelAttribute("chatGPTBean") ChatGPTBean chatGPTBean, Model model, HttpSession session) {
 		log.info("Getting answer from Open AI ChatGPT");
 		String prompt = chatGPTBean.getPrompt(), response = "Fatal Error";
