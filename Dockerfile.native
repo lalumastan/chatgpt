@@ -1,6 +1,6 @@
 ARG APP_FILE=chatgpt
 
-FROM alpine
+FROM debian:bookworm-slim
 
 ARG APP_FILE
 ENV OPENAI_DEMO_API_KEY ${OPENAI_DEMO_API_KEY}

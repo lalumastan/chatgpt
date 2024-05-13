@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mvn -Pnative clean native:compile
