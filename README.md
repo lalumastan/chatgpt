@@ -29,6 +29,9 @@ G -- Test with<br/>InternetBrowser --> H{http://localhost:8080}
 <li><a href="https://pmd.github.io/" target="_new">Programming Mistake Detector (PMD)</a></li>
 <li><a href="https://maven.apache.org/plugins/maven-pmd-plugin/index.html" target="_new">Apache PMD Plugin</a></li>
 <li>Download Jenkins <a href="https://www.jenkins.io/download/" target="_new">war</a> file</li>
+<li><a href="https://www.virtualbox.org/">Oracle VM Virtual Box</a> </li>
+<li><a href="https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualboxHow to install ">Ubuntu image on Oracle VM Virtual Box</a> </li>
+<li><a href="https://hub.docker.com/">Docker Hub</a> </li>
 <li>Follow the Jenkins war installation process specified <a href="https://www.jenkins.io/doc/book/installing/war-file/">here</a> </li>
 <li>Checkout <a href="https://github.com/lalumastan/chatgpt.git">this code</a> from Github</li>
 <li>Create a free account on <a href="https://openai.com/" target="_new">OpenAI</a></li>
@@ -46,3 +49,5 @@ G -- Test with<br/>InternetBrowser --> H{http://localhost:8080}
 <a  href="http://www.youtube.com/watch?feature=player_embedded&v=O5AKrGKfOlg"  target="_blank"><img  src="http://img.youtube.com/vi/O5AKrGKfOlg/0.jpg"  alt="How to Use Static Code Analysis Tool PMD on Web ChatGPT Chatbot using Java/JEE, Springboot, Thymeleaf, Bootstrap, HTML5, jQuery, CSS" width="240"  height="180"  border="10"  /></a>
 ##### How to Automate the Entire Process of Git Checkout, Maven Build, Deploy and Run ChatGPT Chatbot Web Application with Jenkins
 <a  href="http://www.youtube.com/watch?feature=player_embedded&v=iN0nwQ_GWVc"  target="_blank"><img  src="http://img.youtube.com/vi/iN0nwQ_GWVc/0.jpg"  alt="How to Automate the Entire Process of Git Checkout, Maven Build, Deploy and Run ChatGPT Chatbot Web Application with Jenkins" width="240"  height="180"  border="10"  /></a>
+##### How to run the ChatGPT Chatbot Web Application from Fast Docker native image
+<a  href="http://www.youtube.com/watch?feature=player_embedded&v=DeB-u1FRA8c"  target="_blank"><img  src="http://img.youtube.com/vi/DeB-u1FRA8c/0.jpg"  alt="How to run the ChatGPT Chatbot Web Application from Docker native image" width="240"  height="180"  border="10"  /></a>
