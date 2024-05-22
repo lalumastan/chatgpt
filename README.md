@@ -29,17 +29,17 @@ G -- Test with<br/>InternetBrowser --> H{http://localhost:8080}
 <li><a href="https://pmd.github.io/" target="_new">Programming Mistake Detector (PMD)</a></li>
 <li><a href="https://maven.apache.org/plugins/maven-pmd-plugin/index.html" target="_new">Apache PMD Plugin</a></li>
 <li>Download Jenkins <a href="https://www.jenkins.io/download/" target="_new">war</a> file</li>
-<li><a href="https://www.virtualbox.org/">Oracle VM Virtual Box</a> </li>
-<li><a href="https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualboxHow to install ">Ubuntu image on Oracle VM Virtual Box</a> </li>
-<li><a href="https://hub.docker.com/">Docker Hub</a> </li>
-<li>Follow the Jenkins war installation process specified <a href="https://www.jenkins.io/doc/book/installing/war-file/">here</a> </li>
+<li><a href="https://www.virtualbox.org/" target="_new">Oracle VM Virtual Box</a> </li>
+<li><a href="https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualboxHow to install " target="_new">Ubuntu image on Oracle VM Virtual Box</a> </li>
+<li><a href="https://hub.docker.com/" target="_new">Docker Hub</a> </li>
+<li>Follow the Jenkins war installation process specified <a href="https://www.jenkins.io/doc/book/installing/war-file/" target="_new">here</a> </li>
 <li>Checkout <a href="https://github.com/lalumastan/chatgpt.git">this code</a> from Github</li>
 <li>Create a free account on <a href="https://openai.com/" target="_new">OpenAI</a></li>
 <li>Set <code>OPENAI_DEMO_API_KEY</code> environment variable </li>
 <li>Compile and build the code using Eclipse</li>
 <li>Run the <code>ChatGPTApplication.java</code> using Eclipse as Java Application</li>
 <li>Open <a  href="http://localhost:8080" target="_new">http://localhost:8080</a> with your browser to see the result.</li>
-<li><a href="https://aiweb-plum.vercel.app/" target="_new">Advanced Application Demo</a></li>
+<li><a href="https://icsdiscover.great-site.net/?site=aw" target="_new">Advanced Application Demo</a></li>
 </ul>
 
 ### Tutorials
