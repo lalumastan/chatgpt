@@ -1,5 +1,5 @@
 function showWait() {
-	$("#loading").html('Processing.  Please wait ...  <img src="images/loading.gif" alt="Processing.  Please wait ..." width="13%">');
+	$("#loading").html('Processing.  Please wait ...  <i class="fa-solid fa-gear fa-spin" aria-hidden="true"></i>');
 	$("#loading").
 		dialog(
 			{
@@ -29,7 +29,7 @@ function handleClick() {
 	// on click of submit button
 	$("#submitChatGPT").click(function(ev) {
 		$('#submitChatGPT').attr('disabled', 'disabled');
-		//$("#loading").html('<div class="col-3 alert alert-warning rounded text-center">Processing.  Please wait ...  <img src="images/loading.gif" alt="Processing.  Please wait ..." width="10%"></div>');
+		//$("#loading").html('<div class="col-3 alert alert-warning rounded text-center">Processing.  Please wait ...  <i class="fa-solid fa-gear fa-spin" aria-hidden="true"></i></div>');
 		showWait();
 		var chatGPTForm = $("#chatGPTForm");
 		var url = chatGPTForm.attr('action');
